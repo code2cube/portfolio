@@ -27,25 +27,37 @@ export default function Navbar() {
                 href="/"
                 className="text-white hover:bg-white hover:text-black rounded-lg p-2"
               >
-                Home
+                <div className="flex gap-1">
+                  <i className="bi bi-house-door-fill"></i>
+                  Home
+                </div>
               </Link>
               <Link
                 href="/about"
                 className="text-white hover:bg-white hover:text-black rounded-lg p-2"
               >
-                About
+                <div className="flex gap-1">
+                  <i className="bi bi-file-person-fill"></i>
+                  About
+                </div>
               </Link>
               <Link
                 href="/projects"
                 className="text-white hover:bg-white hover:text-black rounded-lg p-2"
               >
-                Projects
+                <div className="flex gap-1">
+                  <i className="bi bi-gear-fill"></i>
+                  Projects
+                </div>
               </Link>
               <Link
                 href="/contact"
                 className="text-white hover:bg-white hover:text-black rounded-lg p-2"
               >
-                Contact
+                <div className="flex gap-1">
+                  <i className="bi bi-telephone-fill"></i>
+                  Contact
+                </div>
               </Link>
             </div>
           </div>
@@ -96,25 +108,37 @@ export default function Navbar() {
               href="/"
               className="text-white block hover:bg-white hover:text-black rounded-lg p-2"
             >
-              Home
+              <div className="flex gap-1">
+                <i className="bi bi-house-door-fill"></i>
+                Home
+              </div>
             </Link>
             <Link
               href="/about"
               className="text-white block hover:bg-white hover:text-black rounded-lg p-2"
             >
-              About
+              <div className="flex gap-1">
+                <i className="bi bi-file-person-fill"></i>
+                About
+              </div>
             </Link>
             <Link
               href="/projects"
               className="text-white block hover:bg-white hover:text-black rounded-lg p-2"
             >
-              Projects
+              <div className="flex gap-1">
+                <i className="bi bi-gear-fill"></i>
+                Projects
+              </div>
             </Link>
             <Link
               href="/contact"
               className="text-white block hover:bg-white hover:text-black rounded-lg p-2"
             >
-              Contact
+              <div className="flex gap-1">
+                <i className="bi bi-telephone-fill"></i>
+                Contact
+              </div>
             </Link>
           </div>
         </div>
