@@ -26,9 +26,19 @@ export default function Projects() {
   }, []);
 
   return (
-    <div>
-      <div className="container">
-        <p className="text-center m-5 text-2xl sm:text-7xl">Projects</p>
+    <div
+      className="relative w-full"
+      style={{
+        backgroundImage: `url('/img/bg.jpg')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="absolute inset-0 bg-black bg-opacity-80"></div>
+      <div className="relative z-10 p-5">
+        <p className="text-center m-5 text-2xl sm:text-7xl text-white">
+          Projects
+        </p>
         <div className="justify-items-center m-auto gap-5 grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
           {data.map((item) => (
             <div
@@ -39,7 +49,7 @@ export default function Projects() {
                 backgroundPosition: "center",
               }}
             >
-              <div className="absolute inset-0 bg-white opacity-80 text-black"></div>
+              <div className="absolute inset-0 bg-white opacity-80 text-black rounded-lg"></div>
               <p className="relative z-10 xl:text-4xl lg:text-3xl text-2xl playfair-display-header">
                 {item.title}
               </p>

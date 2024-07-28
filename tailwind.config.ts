@@ -18,14 +18,6 @@ const config = {
       },
     },
     extend: {
-      backgroundImage: {
-        placeholder: "url('/img/projectCards/placeholder.jpg')",
-        rgCard: "url('/img/projectCards/rgCard.jpg')",
-        sep10Card: "url('/img/projectCards/sep10Card.jpg')",
-        pltCard: "url('/img/projectCards/pltCard.jpg')",
-        piaCard: "url('/img/projectCards/piaCard.jpg')",
-        lbhbhgCard: "url('/img/projectCards/lbhbhgCard.jpg')",
-      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
