@@ -1,19 +1,21 @@
 export async function GET(req: Request) {
   try {
+    const githubUsername = "code2cube";
+
     const projects = [
       {
         title: "RiceGrades",
         description:
           "Grading App developed in React with Zi Xuan Yu and Benjamin Chau.",
         cardID: "rgCard",
-        repo: "https://github.com/code2cube/RiceGrades",
+        repo: `https://github.com/${githubUsername}/RiceGrades`,
         view: "ricegrades.pages.dev/",
       },
       {
         title: "PenguinImageAPI",
         description: "Rest API to get random images of Penguins.",
         cardID: "piaCard",
-        repo: "https://github.com/code2cube/PenguinImageAPI",
+        repo: `https://github.com/${githubUsername}/PenguinImageAPI`,
         view: "https://penguin.sjsharivker.workers.dev/api",
       },
       {
@@ -36,14 +38,20 @@ export async function GET(req: Request) {
         title: "PigLatin Translator",
         description: "Translate English into Piglatin and vice versa.",
         cardID: "pltCard",
-        repo: "https://github.com/code2cube/PigLatin",
+        repo: `https://github.com/${githubUsername}/PigLatin`,
         view: "https://piglatin.pages.dev/",
       },
       {
         title: "Ice Cube Bot",
         description: "Winter themed PVP Bot made for Snow Codes Bot Jam.",
         cardID: "placeholder",
-        repo: "https://github.com/code2cube/Ice-Cube-Bot",
+        repo: `https://github.com/${githubUsername}/Ice-Cube-Bot`,
+      },
+      {
+        title: "Eris Bot Template",
+        description: "Template for an Eris.js based Discord Bot.",
+        cardID: "ebtCard",
+        repo: `https://github.com/${githubUsername}/Eris-Bot-Template`,
       },
     ];
 
