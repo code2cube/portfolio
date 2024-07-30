@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
+import { TransitionLink } from "@/components/TransitionLink";
 
 export default function Navbar() {
   const [isClick, setisClick] = useState(false);
@@ -16,14 +17,14 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <Link href="/" className="text-white">
+              <TransitionLink href="/" className="text-white">
                 Samuel Sharivker
-              </Link>
+              </TransitionLink>
             </div>
           </div>
           <div className="hidden md:block">
             <div className="ml-4 flex items-center space-x-4">
-              <Link
+              <TransitionLink
                 href="/"
                 className="text-white hover:bg-red-700 hover:text-black rounded-lg p-2"
               >
@@ -31,8 +32,8 @@ export default function Navbar() {
                   <i className="bi bi-house-door-fill"></i>
                   Home
                 </div>
-              </Link>
-              <Link
+              </TransitionLink>
+              <TransitionLink
                 href="/about"
                 className="text-white hover:bg-red-700 hover:text-black rounded-lg p-2"
               >
@@ -40,8 +41,8 @@ export default function Navbar() {
                   <i className="bi bi-file-person-fill"></i>
                   About
                 </div>
-              </Link>
-              <Link
+              </TransitionLink>
+              <TransitionLink
                 href="/projects"
                 className="text-white hover:bg-red-700 hover:text-black rounded-lg p-2"
               >
@@ -49,8 +50,8 @@ export default function Navbar() {
                   <i className="bi bi-gear-fill"></i>
                   Projects
                 </div>
-              </Link>
-              <Link
+              </TransitionLink>
+              <TransitionLink
                 href="/contact"
                 className="text-white hover:bg-red-700 hover:text-black rounded-lg p-2"
               >
@@ -58,7 +59,7 @@ export default function Navbar() {
                   <i className="bi bi-telephone-fill"></i>
                   Contact
                 </div>
-              </Link>
+              </TransitionLink>
             </div>
           </div>
           <div className="md:hidden flex items-center">
@@ -104,7 +105,7 @@ export default function Navbar() {
       {isClick && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link
+            <TransitionLink
               href="/"
               className="text-white block hover:bg-red-700 hover:text-black rounded-lg p-2"
             >
@@ -112,8 +113,8 @@ export default function Navbar() {
                 <i className="bi bi-house-door-fill"></i>
                 Home
               </div>
-            </Link>
-            <Link
+            </TransitionLink>
+            <TransitionLink
               href="/about"
               className="text-white block hover:bg-red-700 hover:text-black rounded-lg p-2"
             >
@@ -121,8 +122,8 @@ export default function Navbar() {
                 <i className="bi bi-file-person-fill"></i>
                 About
               </div>
-            </Link>
-            <Link
+            </TransitionLink>
+            <TransitionLink
               href="/projects"
               className="text-white block hover:bg-red-700 hover:text-black rounded-lg p-2"
             >
@@ -130,8 +131,8 @@ export default function Navbar() {
                 <i className="bi bi-gear-fill"></i>
                 Projects
               </div>
-            </Link>
-            <Link
+            </TransitionLink>
+            <TransitionLink
               href="/contact"
               className="text-white block hover:bg-red-700 hover:text-black rounded-lg p-2"
             >
@@ -139,7 +140,7 @@ export default function Navbar() {
                 <i className="bi bi-telephone-fill"></i>
                 Contact
               </div>
-            </Link>
+            </TransitionLink>
           </div>
         </div>
       )}
