@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
@@ -27,7 +26,6 @@ export default function RootLayout({
         <div className="flex flex-col min-h-screen">
           <Navbar />
           <main className="flex-grow roboto-mono-main">{children}</main>
-          <Toaster />
           <Footer />
         </div>
       </body>
