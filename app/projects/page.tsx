@@ -29,19 +29,8 @@ export default function Projects() {
   }, []);
 
   return (
-    <div
-      className="relative w-full"
-      style={{
-        backgroundImage: `url('/img/bg.jpg')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <div className="absolute inset-0 bg-black bg-opacity-80"></div>
+    <div className="bg-gradient-to-b from-black via-gray-300 to-black z-10">
       <div className="relative z-10 p-5">
-        <p className="text-center m-5 text-2xl sm:text-7xl text-red-700 font-bold">
-          Projects
-        </p>
         <div className="justify-items-center m-auto grid lg:grid-cols-2 grid-cols-1">
           {loading ? (
             <h1>Loading...</h1>

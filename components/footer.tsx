@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white p-5 flex flex-col h-20 text-center justify-center items-center gap-1">
+    <footer className="bg-black text-white p-5 flex flex-col h-20 text-center justify-center items-center gap-1 z-50">
       <div className="flex gap-3">
         <Link href="https://github.com/code2cube/">
           <i className="bi bi-github hover:text-red-700 transition ease-in"></i>
