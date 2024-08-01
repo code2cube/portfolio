@@ -33,42 +33,42 @@ export async function GET(req: Request) {
     const projects: Project[] = [
       {
         title: "RiceGrades",
-        cardID: "rgCard",
+        cardID: "/img/projectCards/rgCard.jpg",
         repo: "https://github.com/code2cube/RiceGrades",
         view: "ricegrades.pages.dev/",
       },
       {
         title: "PenguinImageAPI",
-        cardID: "piaCard",
+        cardID: "/img/projectCards/piaCard.jpg",
         repo: "https://github.com/code2cube/PenguinImageAPI",
         view: "https://penguin.sjsharivker.workers.dev/api",
       },
       {
         title: "SEP10 Freedom Project",
-        cardID: "sep10Card",
+        cardID: "/img/projectCards/sep10Card.jpg",
         repo: "https://github.com/samuels0052/sep10-freedom-project",
         view: "samuels0052.github.io/sep10-freedom-project/",
       },
       {
         title: "LBH Blackhole Game",
-        cardID: "lbhbhgCard",
+        cardID: "/img/projectCards/lbhbhgCard.jpg",
         repo: "https://github.com/samuels0052/LBH-Game",
         view: "https://samuels0052.github.io/LBH-Game/",
       },
       {
         title: "PigLatin Translator",
-        cardID: "pltCard",
+        cardID: "/img/projectCards/pltCard.jpg",
         repo: "https://github.com/code2cube/PigLatin",
         view: "https://piglatin.pages.dev/",
       },
       {
         title: "Ice Cube Bot",
-        cardID: "placeholder",
+        cardID: "/img/projectCards/placeholder.jpg",
         repo: "https://github.com/code2cube/Ice-Cube-Bot",
       },
       {
         title: "Eris Bot Template",
-        cardID: "ebtCard",
+        cardID: "/img/projectCards/ebtCard.jpg",
         repo: "https://github.com/code2cube/Eris-Bot-Template",
       },
     ];
