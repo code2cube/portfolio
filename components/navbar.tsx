@@ -26,7 +26,7 @@ export default function Navbar() {
             <div className="ml-4 flex items-center space-x-4">
               <TransitionLink
                 href="/"
-                className="text-white hover:bg-red-700 hover:text-black rounded-lg p-2"
+                className="text-white hover:bg-red-700 hover:text-black rounded-lg p-2 transition ease-in"
               >
                 <div className="flex gap-1">
                   <i className="bi bi-house-door-fill"></i>
@@ -35,7 +35,7 @@ export default function Navbar() {
               </TransitionLink>
               <TransitionLink
                 href="/about"
-                className="text-white hover:bg-red-700 hover:text-black rounded-lg p-2"
+                className="text-white hover:bg-red-700 hover:text-black rounded-lg p-2 transition ease-in"
               >
                 <div className="flex gap-1">
                   <i className="bi bi-file-person-fill"></i>
@@ -44,7 +44,7 @@ export default function Navbar() {
               </TransitionLink>
               <TransitionLink
                 href="/projects"
-                className="text-white hover:bg-red-700 hover:text-black rounded-lg p-2"
+                className="text-white hover:bg-red-700 hover:text-black rounded-lg p-2 transition ease-in"
               >
                 <div className="flex gap-1">
                   <i className="bi bi-gear-fill"></i>
@@ -53,7 +53,7 @@ export default function Navbar() {
               </TransitionLink>
               <TransitionLink
                 href="/contact"
-                className="text-white hover:bg-red-700 hover:text-black rounded-lg p-2"
+                className="text-white hover:bg-red-700 hover:text-black rounded-lg p-2 transition ease-in"
               >
                 <div className="flex gap-1">
                   <i className="bi bi-telephone-fill"></i>
@@ -107,7 +107,7 @@ export default function Navbar() {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <TransitionLink
               href="/"
-              className="text-white block hover:bg-red-700 hover:text-black rounded-lg p-2"
+              className="text-white block hover:bg-red-700 hover:text-black rounded-lg p-2 transition ease-in"
             >
               <div className="flex gap-1">
                 <i className="bi bi-house-door-fill"></i>
@@ -116,7 +116,7 @@ export default function Navbar() {
             </TransitionLink>
             <TransitionLink
               href="/about"
-              className="text-white block hover:bg-red-700 hover:text-black rounded-lg p-2"
+              className="text-white block hover:bg-red-700 hover:text-black rounded-lg p-2 transition ease-in"
             >
               <div className="flex gap-1">
                 <i className="bi bi-file-person-fill"></i>
@@ -125,7 +125,7 @@ export default function Navbar() {
             </TransitionLink>
             <TransitionLink
               href="/projects"
-              className="text-white block hover:bg-red-700 hover:text-black rounded-lg p-2"
+              className="text-white block hover:bg-red-700 hover:text-black rounded-lg p-2 transition ease-in"
             >
               <div className="flex gap-1">
                 <i className="bi bi-gear-fill"></i>
@@ -134,7 +134,7 @@ export default function Navbar() {
             </TransitionLink>
             <TransitionLink
               href="/contact"
-              className="text-white block hover:bg-red-700 hover:text-black rounded-lg p-2"
+              className="text-white block hover:bg-red-700 hover:text-black rounded-lg p-2 transition ease-in"
             >
               <div className="flex gap-1">
                 <i className="bi bi-telephone-fill"></i>
