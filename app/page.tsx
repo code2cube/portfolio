@@ -17,29 +17,37 @@ interface Project {
 
 export default function Home() {
   const [projects, setProjects] = useState<Project[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch("/api/projects");
-      const result = await response.json();
+    if (loading) {
+      const fetchData = async () => {
+        const response = await fetch("/api/projects");
+        const result = await response.json();
 
-      const convertedProject: Project[] = result.projects.map(
-        (i: fetchProject) => ({
-          title: i.title,
-          link: i.repo,
-          thumbnail: i.cardID,
-        })
-      );
+        const convertedProject: Project[] = result.projects.map(
+          (i: fetchProject) => ({
+            title: i.title,
+            link: i.repo,
+            thumbnail: i.cardID,
+          })
+        );
 
-      setProjects(convertedProject);
-    };
+        setProjects(convertedProject);
+        setLoading(false);
+      };
 
-    fetchData();
-  }, []);
+      fetchData();
+    }
+  }, [loading]);
 
   return (
     <div>
-      <HeroParallax products={projects} />
+      {loading ? (
+        <h1 className="text-white text-center">Loading...</h1>
+      ) : (
+        <HeroParallax products={projects} />
+      )}
     </div>
   );
 }
