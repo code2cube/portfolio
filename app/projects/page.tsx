@@ -68,17 +68,21 @@ export default function Projects() {
                       target="__blank"
                       className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
                     >
-                      <i className="bi bi-github text-xl"></i>
+                      <span className="text-xl">
+                        <i className="bi bi-github"></i> Code
+                      </span>
                     </CardItem>
                     {item.view && (
                       <CardItem
                         translateZ={20}
                         as={Link}
-                        href={item.view}
+                        href={item.repo}
                         target="__blank"
-                        className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                        className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
                       >
-                        View
+                        <span className="text-xl">
+                          <i className="bi bi-link-45deg"></i> Preview
+                        </span>
                       </CardItem>
                     )}
                   </div>
