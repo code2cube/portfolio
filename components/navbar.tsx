@@ -4,12 +4,24 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { TransitionLink } from "@/components/TransitionLink";
 
+interface navTabs {
+  text: string;
+  route: string;
+}
+
 export default function Navbar() {
   const [isClick, setisClick] = useState(false);
 
   const toggleNavbar = (): void => {
     setisClick(!isClick);
   };
+
+  const navPages: navTabs[] = [
+    { text: "Home", route: "/" },
+    { text: "About", route: "/about" },
+    { text: "Projects", route: "/projects" },
+    { text: "Contact", route: "/contact" },
+  ];
 
   return (
     <nav className="bg-black z-50 sticky top-0">
@@ -24,42 +36,17 @@ export default function Navbar() {
           </div>
           <div className="hidden md:block">
             <div className="ml-4 flex items-center space-x-4">
-              <TransitionLink
-                href="/"
-                className="text-white hover:bg-red-700 hover:text-black rounded-lg p-2 transition ease-in duration-200"
-              >
-                <div className="flex gap-1">
-                  <i className="bi bi-house-door-fill"></i>
-                  Home
-                </div>
-              </TransitionLink>
-              <TransitionLink
-                href="/about"
-                className="text-white hover:bg-red-700 hover:text-black rounded-lg p-2 transition ease-in duration-200"
-              >
-                <div className="flex gap-1">
-                  <i className="bi bi-file-person-fill"></i>
-                  About
-                </div>
-              </TransitionLink>
-              <TransitionLink
-                href="/projects"
-                className="text-white hover:bg-red-700 hover:text-black rounded-lg p-2 transition ease-in duration-200"
-              >
-                <div className="flex gap-1">
-                  <i className="bi bi-gear-fill"></i>
-                  Projects
-                </div>
-              </TransitionLink>
-              <TransitionLink
-                href="/contact"
-                className="text-white hover:bg-red-700 hover:text-black rounded-lg p-2 transition ease-in duration-200"
-              >
-                <div className="flex gap-1">
-                  <i className="bi bi-telephone-fill"></i>
-                  Contact
-                </div>
-              </TransitionLink>
+              {navPages.map((item) => (
+                <TransitionLink
+                  href={item.route}
+                  className="text-white hover:bg-red-700 rounded-lg p-2 transition ease-in duration-200 transform hover:scale-110"
+                >
+                  <div className="flex gap-1">
+                    <i className="bi bi-house-door-fill"></i>
+                    {item.text}
+                  </div>
+                </TransitionLink>
+              ))}
             </div>
           </div>
           <div className="md:hidden flex items-center">
@@ -105,42 +92,17 @@ export default function Navbar() {
       {isClick && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <TransitionLink
-              href="/"
-              className="text-white block hover:bg-red-700 hover:text-black rounded-lg p-2 transition ease-in duration-200"
-            >
-              <div className="flex gap-1">
-                <i className="bi bi-house-door-fill"></i>
-                Home
-              </div>
-            </TransitionLink>
-            <TransitionLink
-              href="/about"
-              className="text-white block hover:bg-red-700 hover:text-black rounded-lg p-2 transition ease-in duration-200"
-            >
-              <div className="flex gap-1">
-                <i className="bi bi-file-person-fill"></i>
-                About
-              </div>
-            </TransitionLink>
-            <TransitionLink
-              href="/projects"
-              className="text-white block hover:bg-red-700 hover:text-black rounded-lg p-2 transition ease-in duration-200"
-            >
-              <div className="flex gap-1">
-                <i className="bi bi-gear-fill"></i>
-                Projects
-              </div>
-            </TransitionLink>
-            <TransitionLink
-              href="/contact"
-              className="text-white block hover:bg-red-700 hover:text-black rounded-lg p-2 transition ease-in duration-200"
-            >
-              <div className="flex gap-1">
-                <i className="bi bi-telephone-fill"></i>
-                Contact
-              </div>
-            </TransitionLink>
+            {navPages.map((item) => (
+              <TransitionLink
+                href={item.route}
+                className="text-white block hover:bg-red-700 rounded-lg p-2 transition ease-in duration-200"
+              >
+                <div className="flex gap-1">
+                  <i className="bi bi-house-door-fill"></i>
+                  {item.text}
+                </div>
+              </TransitionLink>
+            ))}
           </div>
         </div>
       )}
