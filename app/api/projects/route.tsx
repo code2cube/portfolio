@@ -63,7 +63,7 @@ export async function GET(req: Request) {
       },
       {
         title: "Ice Cube Bot",
-        cardID: "/img/projectCards/placeholder.jpg",
+        cardID: "/img/projectCards/icbCard.jpg",
         repo: "https://github.com/code2cube/Ice-Cube-Bot",
       },
       {
