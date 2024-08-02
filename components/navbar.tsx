@@ -38,6 +38,7 @@ export default function Navbar() {
             <div className="ml-4 flex items-center space-x-4">
               {navPages.map((item) => (
                 <TransitionLink
+                  key={item.route}
                   href={item.route}
                   className="text-white hover:bg-red-700 rounded-lg p-2 transition ease-in duration-200 transform hover:scale-110"
                 >
@@ -94,6 +95,7 @@ export default function Navbar() {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navPages.map((item) => (
               <TransitionLink
+                key={item.route}
                 href={item.route}
                 className="text-white block hover:bg-red-700 rounded-lg p-2 transition ease-in duration-200"
               >

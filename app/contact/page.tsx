@@ -11,7 +11,10 @@ export default function Contact() {
         <p>
           For any questions or business inquiries, please feel free to email me:
         </p>
-        <Link className="text-red-500" href="mailto:sam@samuelsharivker.com">
+        <Link
+          className="text-red-500 transition ease-in duration-200 transform hover:scale-110"
+          href="mailto:sam@samuelsharivker.com"
+        >
           sam@samuelsharivker.com
         </Link>
       </div>
