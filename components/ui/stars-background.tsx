@@ -91,16 +91,19 @@ export const StarsBackground: React.FC<StarsBackgroundProps> = ({
       }
     };
 
+    // Store the ref in a local variable
+    const containerElement = containerRef.current;
+
     updateStars();
 
     const resizeObserver = new ResizeObserver(updateStars);
-    if (containerRef.current) {
-      resizeObserver.observe(containerRef.current);
+    if (containerElement) {
+      resizeObserver.observe(containerElement);
     }
 
     return () => {
-      if (containerRef.current) {
-        resizeObserver.unobserve(containerRef.current);
+      if (containerElement) {
+        resizeObserver.unobserve(containerElement);
       }
     };
   }, [
