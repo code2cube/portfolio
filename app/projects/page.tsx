@@ -79,7 +79,7 @@ export default function Projects() {
                         <CardItem
                           translateZ={20}
                           as={Link}
-                          href={item.repo}
+                          href={item.view}
                           target="__blank"
                           className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
                         >

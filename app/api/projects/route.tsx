@@ -35,7 +35,7 @@ export async function GET(req: Request) {
         title: "RiceGrades",
         cardID: "/img/projectCards/rgCard.jpg",
         repo: "https://github.com/code2cube/RiceGrades",
-        view: "ricegrades.pages.dev/",
+        view: "https://ricegrades.pages.dev",
       },
       {
         title: "PenguinImageAPI",
@@ -47,7 +47,7 @@ export async function GET(req: Request) {
         title: "SEP10 Freedom Project",
         cardID: "/img/projectCards/sep10Card.jpg",
         repo: "https://github.com/samuels0052/sep10-freedom-project",
-        view: "samuels0052.github.io/sep10-freedom-project/",
+        view: "https://samuels0052.github.io/sep10-freedom-project/",
       },
       {
         title: "LBH Blackhole Game",
