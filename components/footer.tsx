@@ -9,7 +9,7 @@ interface footerLinks {
 
 export default function Footer() {
   const links: footerLinks[] = [
-    { link: "https://github.com/code2cube/", icon: "bi-github" },
+    { link: "https://github.com/samSharivker/", icon: "bi-github" },
     { link: "https://www.instagram.com/live2cube", icon: "bi-instagram" },
     {
       link: "https://www.linkedin.com/in/samuel-sharivker/",

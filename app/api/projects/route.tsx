@@ -34,13 +34,13 @@ export async function GET(req: Request) {
       {
         title: "RiceGrades",
         cardID: "/img/projectCards/rgCard.jpg",
-        repo: "https://github.com/code2cube/RiceGrades",
+        repo: "https://github.com/samSharivker/RiceGrades",
         view: "https://ricegrades.pages.dev",
       },
       {
         title: "PenguinImageAPI",
         cardID: "/img/projectCards/piaCard.jpg",
-        repo: "https://github.com/code2cube/PenguinImageAPI",
+        repo: "https://github.com/samSharivker/PenguinImageAPI",
         view: "https://penguin.sjsharivker.workers.dev/api",
       },
       {
@@ -58,18 +58,18 @@ export async function GET(req: Request) {
       {
         title: "PigLatin Translator",
         cardID: "/img/projectCards/pltCard.jpg",
-        repo: "https://github.com/code2cube/PigLatin",
+        repo: "https://github.com/samSharivker/PigLatin",
         view: "https://piglatin.pages.dev/",
       },
       {
         title: "Ice Cube Bot",
         cardID: "/img/projectCards/icbCard.jpg",
-        repo: "https://github.com/code2cube/Ice-Cube-Bot",
+        repo: "https://github.com/samSharivker/Ice-Cube-Bot",
       },
       {
         title: "Eris Bot Template",
         cardID: "/img/projectCards/ebtCard.jpg",
-        repo: "https://github.com/code2cube/Eris-Bot-Template",
+        repo: "https://github.com/samSharivker/Eris-Bot-Template",
       },
     ];
 
