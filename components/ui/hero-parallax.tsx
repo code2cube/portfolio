@@ -10,9 +10,6 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-import { ShootingStars } from "@/components/ui/shooting-stars";
-import { StarsBackground } from "@/components/ui/stars-background";
-
 export const HeroParallax = ({
   products,
 }: {
@@ -100,8 +97,6 @@ export const HeroParallax = ({
           ))}
         </motion.div>
       </motion.div>
-      <ShootingStars />
-      <StarsBackground />
     </div>
   );
 };
