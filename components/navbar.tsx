@@ -7,6 +7,7 @@ import { TransitionLink } from "@/components/TransitionLink";
 interface navTabs {
   text: string;
   route: string;
+  icon: string;
 }
 
 export default function Navbar() {
@@ -17,10 +18,11 @@ export default function Navbar() {
   };
 
   const navPages: navTabs[] = [
-    { text: "Home", route: "/" },
-    { text: "About", route: "/about" },
-    { text: "Projects", route: "/projects" },
-    { text: "Contact", route: "/contact" },
+    { text: "Home", route: "/", icon: "house-door-fill" },
+    { text: "About", route: "/about", icon: "file-person-fill" },
+    { text: "Projects", route: "/projects", icon: "briefcase-fill" },
+    { text: "Papers", route: "/papers", icon: "archive-fill" },
+    { text: "Contact", route: "/contact", icon: "telephone-fill" },
   ];
 
   return (
@@ -43,7 +45,7 @@ export default function Navbar() {
                   className="text-white hover:bg-red-700 rounded-lg p-2 transition ease-in duration-200 transform hover:scale-110"
                 >
                   <div className="flex gap-1">
-                    <i className="bi bi-house-door-fill"></i>
+                    <i className={`bi bi-${item.icon}`}></i>
                     {item.text}
                   </div>
                 </TransitionLink>
@@ -100,7 +102,7 @@ export default function Navbar() {
                 className="text-white block hover:bg-red-700 rounded-lg p-2 transition ease-in duration-200"
               >
                 <div className="flex gap-1">
-                  <i className="bi bi-house-door-fill"></i>
+                  <i className={`bi bi-${item.icon}`}></i>
                   {item.text}
                 </div>
               </TransitionLink>
