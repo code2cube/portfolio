@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { LinkPreview } from "@/components/ui/link-preview";
 import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
+import LoadingText from "@/components/loading";
 
 interface Paper {
   title: string;
@@ -34,7 +35,7 @@ export default function Papers() {
       <ShootingStars className="absolute inset-0 z-0" />
       <StarsBackground className="absolute inset-0 z-0" />
       {loading ? (
-        <h1 className="text-white text-center">Loading...</h1>
+        <LoadingText />
       ) : (
         <div className="relative text-white min-h-screen z-50 flex flex-col items-center justify-center gap-3 flex-wrap">
           <p className="lg:text-8xl md:text-6xl sm:text-5xl text-2xl">

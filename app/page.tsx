@@ -2,6 +2,7 @@
 
 import { HeroParallax } from "@/components/ui/hero-parallax";
 import { useState, useEffect } from "react";
+import LoadingText from "@/components/loading";
 
 interface fetchProject {
   title: string;
@@ -43,11 +44,7 @@ export default function Home() {
 
   return (
     <div>
-      {loading ? (
-        <h1 className="text-white text-center">Loading...</h1>
-      ) : (
-        <HeroParallax products={projects} />
-      )}
+      {loading ? <LoadingText /> : <HeroParallax products={projects} />}
     </div>
   );
 }

@@ -6,6 +6,7 @@ import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
 import { useState, useEffect } from "react";
+import LoadingText from "@/components/loading";
 
 interface Project {
   title: string;
@@ -37,7 +38,7 @@ export default function Projects() {
       <ShootingStars className="absolute inset-0 z-0" />
       <StarsBackground className="absolute inset-0 z-0" />
       {loading ? (
-        <h1 className="text-white text-center">Loading...</h1>
+        <LoadingText />
       ) : (
         <div className="relative z-10 p-5">
           <div className="justify-items-center m-auto grid lg:grid-cols-2 grid-cols-1">
