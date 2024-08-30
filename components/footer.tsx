@@ -23,7 +23,7 @@ export default function Footer() {
           <LinkPreview
             key={item.link}
             url={item.link}
-            className="font-bold bg-clip-text text-transparent bg-gradient-to-br transition ease-in hover:scale-150 hover:text-red-700 text-white duration-200"
+            className="transition ease-in hover:scale-150 hover:text-red-700 text-white duration-200"
           >
             <i className={`bi bi-${item.icon}`}></i>
           </LinkPreview>
