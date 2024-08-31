@@ -4,15 +4,25 @@ import { LinkPreview } from "@/components/ui/link-preview";
 interface footerLinks {
   link: string;
   icon: string;
+  preview: string;
 }
 
 export default function Footer() {
   const links: footerLinks[] = [
-    { link: "https://github.com/samSharivker/", icon: "github" },
-    { link: "https://www.instagram.com/live2cube", icon: "instagram" },
+    {
+      link: "https://github.com/samSharivker/",
+      icon: "github",
+      preview: "/img/footerPreviews/github.png",
+    },
+    {
+      link: "https://www.instagram.com/live2cube",
+      icon: "instagram",
+      preview: "/img/footerPreviews/instagram.png",
+    },
     {
       link: "https://www.linkedin.com/in/samuel-sharivker/",
       icon: "linkedin",
+      preview: "/img/footerPreviews/linkedin.png",
     },
   ];
 
@@ -23,6 +33,8 @@ export default function Footer() {
           <LinkPreview
             key={item.link}
             url={item.link}
+            imageSrc={item.preview}
+            isStatic
             className="transition ease-in hover:scale-150 hover:text-red-700 text-white duration-200"
           >
             <i className={`bi bi-${item.icon}`}></i>
