@@ -11,6 +11,7 @@ interface Paper {
   title: string;
   path: string;
   preview: string;
+  authors: string[];
 }
 
 export default function Papers() {
@@ -37,11 +38,11 @@ export default function Papers() {
       {loading ? (
         <LoadingText />
       ) : (
-        <div className="relative text-white min-h-screen z-50 flex flex-col items-center justify-center gap-3 flex-wrap">
-          <p className="lg:text-8xl md:text-6xl sm:text-5xl text-2xl">
+        <div className="relative text-white min-h-screen z-50 flex flex-col items-center justify-center gap-1 flex-wrap">
+          <p className="lg:text-8xl md:text-6xl sm:text-5xl text-2xl text-center">
             Research Papers
           </p>
-          <ul>
+          <ul className="p-5">
             {data.map((item, index) => (
               <li
                 key={item.title}
@@ -51,9 +52,14 @@ export default function Papers() {
                   url={item.path}
                   imageSrc={item.preview}
                   isStatic
-                  className="text-white transition ease-in hover:text-red-700 duration-200 md:text-2xl sm:text-xl"
+                  className="text-white transition ease-in hover:text-red-700 duration-200 flex flex-col gap-1 flex-wrap items-center"
                 >
-                  {index + 1}) {item.title}
+                  <p className="lg:text-3xl md:text-2xl text-lg leading-tight anton-regular">
+                    {index + 1}) {item.title}
+                  </p>
+                  <p className="lg:text-xl md:text-lg sm:text-sm text-xs caveat-400">
+                    By {item.authors.join(", ")}
+                  </p>
                 </LinkPreview>
               </li>
             ))}

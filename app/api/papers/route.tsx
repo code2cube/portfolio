@@ -2,6 +2,7 @@ interface Paper {
   title: string;
   path: string;
   preview: string;
+  authors: string[];
 }
 
 export async function GET(req: Request) {
@@ -12,6 +13,7 @@ export async function GET(req: Request) {
         path: "/papers/Social_Engineering_and_Malware_Propagation.pdf",
         preview:
           "/img/paperPreviews/Social_Engineering_and_Malware_Propagation.png",
+        authors: ["Maxwell Derella", "Samuel Sharivker", "Rafael Aldana-Diaz"],
       },
     ];
 

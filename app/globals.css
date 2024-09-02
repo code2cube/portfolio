@@ -3,6 +3,8 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
 
 html {
   scroll-behavior: smooth;
@@ -32,6 +34,19 @@ body {
 
 .playfair-display-header {
   font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.caveat-400 {
+  font-family: "Caveat", cursive;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
