@@ -11,6 +11,7 @@ export default function Login() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [formType, setFormType] = useState("login");
 
   const handleFirstNameChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setFirstName(e.target.value);
@@ -27,92 +28,169 @@ export default function Login() {
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setPassword(e.target.value);
 
+  const handleFormTypeChange = (type: String) => {
+    if (type == "login") {
+      setFormType("login");
+    } else if (type == "signup") {
+      setFormType("signup");
+    }
+  };
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    let payload = {
-      firstName: firstName,
-      lastName: lastName,
-      username: username,
-      email: email,
-      password: password,
-    };
-    console.log(payload);
+    if (formType == "login") {
+      console.log("login");
+    } else {
+      let payload = {
+        firstName: firstName,
+        lastName: lastName,
+        username: username,
+        email: email,
+        password: password,
+      };
+      console.log("signup");
+    }
   };
   return (
     <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black z-50">
-      <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
-        Hello there!
-      </h2>
-      <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
-        Sign up to access chat platform!
-      </p>
+      {formType == "login" ? (
+        <div>
+          <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
+            Already have an account?
+          </h2>
+          <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
+            Login in!
+          </p>
 
-      <form className="my-8" onSubmit={handleSubmit}>
-        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
-          <LabelInputContainer>
-            <Label htmlFor="firstName">First name</Label>
-            <Input
-              id="firstName"
-              value={firstName}
-              onChange={handleFirstNameChange}
-              placeholder="John"
-              type="text"
-              required
-            />
-          </LabelInputContainer>
-          <LabelInputContainer>
-            <Label htmlFor="lastName">Last name</Label>
-            <Input
-              id="lastName"
-              value={lastName}
-              onChange={handleLastNameChange}
-              placeholder="Doe"
-              type="text"
-              required
-            />
-          </LabelInputContainer>
+          <form className="my-8" onSubmit={handleSubmit}>
+            <LabelInputContainer className="mb-4">
+              <Label htmlFor="email">Email Address</Label>
+              <Input
+                id="email"
+                value={email}
+                onChange={handleEmailChange}
+                placeholder="jdoe@example.com"
+                type="email"
+                required
+              />
+            </LabelInputContainer>
+            <LabelInputContainer className="mb-4">
+              <Label htmlFor="password">Password</Label>
+              <Input
+                id="password"
+                value={password}
+                onChange={handlePasswordChange}
+                placeholder="••••••••"
+                type="password"
+                required
+              />
+            </LabelInputContainer>
+            <div className="flex flex-col gap-2">
+              <button
+                className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+                type="submit"
+              >
+                Login &rarr;
+                <BottomGradient />
+              </button>
+              <button
+                className="relative group/btn bg-red-700 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+                type="button"
+                onClick={() => handleFormTypeChange("signup")}
+              >
+                Create an Account &rarr;
+                <BottomGradient />
+              </button>
+            </div>
+          </form>
         </div>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="username">Username</Label>
-          <Input
-            id="username"
-            value={username}
-            onChange={handleUsernameChange}
-            placeholder="jdoe123"
-            type="text"
-            required
-          />
-        </LabelInputContainer>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="email">Email Address</Label>
-          <Input
-            id="email"
-            value={email}
-            onChange={handleEmailChange}
-            placeholder="jdoe@example.com"
-            type="email"
-            required
-          />
-        </LabelInputContainer>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="password">Password</Label>
-          <Input
-            id="password"
-            value={password}
-            onChange={handlePasswordChange}
-            placeholder="••••••••"
-            type="password"
-            required
-          />
-        </LabelInputContainer>
-        <button
-          className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
-          type="submit"
-        >
-          Sign up &rarr;
-          <BottomGradient />
-        </button>
-      </form>
+      ) : (
+        <div>
+          <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
+            Hello there!
+          </h2>
+          <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
+            Sign up to access chat platform!
+          </p>
+
+          <form className="my-8" onSubmit={handleSubmit}>
+            <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
+              <LabelInputContainer>
+                <Label htmlFor="firstName">First name</Label>
+                <Input
+                  id="firstName"
+                  value={firstName}
+                  onChange={handleFirstNameChange}
+                  placeholder="John"
+                  type="text"
+                  required
+                />
+              </LabelInputContainer>
+              <LabelInputContainer>
+                <Label htmlFor="lastName">Last name</Label>
+                <Input
+                  id="lastName"
+                  value={lastName}
+                  onChange={handleLastNameChange}
+                  placeholder="Doe"
+                  type="text"
+                  required
+                />
+              </LabelInputContainer>
+            </div>
+            <LabelInputContainer className="mb-4">
+              <Label htmlFor="username">Username</Label>
+              <Input
+                id="username"
+                value={username}
+                onChange={handleUsernameChange}
+                placeholder="jdoe123"
+                type="text"
+                required
+              />
+            </LabelInputContainer>
+            <LabelInputContainer className="mb-4">
+              <Label htmlFor="email">Email Address</Label>
+              <Input
+                id="email"
+                value={email}
+                onChange={handleEmailChange}
+                placeholder="jdoe@example.com"
+                type="email"
+                required
+              />
+            </LabelInputContainer>
+            <LabelInputContainer className="mb-4">
+              <Label htmlFor="password">Password</Label>
+              <Input
+                id="password"
+                value={password}
+                onChange={handlePasswordChange}
+                placeholder="••••••••"
+                type="password"
+                required
+              />
+            </LabelInputContainer>
+            <div className="flex flex-col gap-2">
+              <button
+                className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+                type="submit"
+              >
+                Sign up &rarr;
+                <BottomGradient />
+              </button>
+              <button
+                className="relative group/btn bg-red-700 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+                type="button"
+                onClick={() => handleFormTypeChange("login")}
+              >
+                Login &rarr;
+                <BottomGradient />
+              </button>
+            </div>
+          </form>
+        </div>
+      )}
     </div>
   );
 }
